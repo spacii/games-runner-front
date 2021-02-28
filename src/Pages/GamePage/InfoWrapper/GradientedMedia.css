@@ -1,0 +1,27 @@
+.GradientedMedia {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    display: inline-block;
+}
+
+#MediaFile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.BlackGradientLeftRight {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+}
+
+.BlackGradientBottomUp {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
+    position: absolute;
+}

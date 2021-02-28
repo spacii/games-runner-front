@@ -1,0 +1,75 @@
+.InfoPanel {
+    width: 720px;
+    position: absolute;
+    z-index: 1;
+    left: 160px;
+    top: 64px;
+}
+
+#GameLogoImage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.GameInfo {
+    color: gray;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 12px;
+}
+
+    .GameInfoRaiting {
+        color: rgb(36, 248, 17);
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 32px;
+    }
+
+    .GameInfoGeneral {
+        display: inline-block;
+        margin-right: 12px;
+    }
+
+        .GameInfoGeneralSpan {
+            margin-right: 16px;
+        }
+
+.GameDescription {
+    color: white;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 24px;
+}
+
+.GameDescription p {
+    margin: 0;
+    padding: 0;
+}
+
+.GamePurchase {
+
+}
+
+    .GamePurchaseText {
+        color: rgb(219, 79, 79);
+        font-size: 28px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 12px;
+    }
+
+    .GamePurchasePlatforms {
+
+    }
+
+        .GamePurchasePlatform {
+            width: 64px;
+            height: 64px;
+            display: inline-block;
+            margin-right: 24px;
+        }
+
+            #GamePurchasePlatformLogo {
+                max-width: 100%;
+                max-height: 100%;
+            }

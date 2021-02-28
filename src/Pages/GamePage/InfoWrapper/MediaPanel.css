@@ -1,0 +1,11 @@
+.MediaPanel {
+    width: 1920px;
+    height: 720px;
+}
+
+.BlackPart {
+    width: 640px;
+    height: 720px;
+    background: #0c0c0c;
+    display: inline-block;
+}
