@@ -2,6 +2,7 @@ import React from "react";
 
 import PrimaryInfo from "./PrimaryInfo.js";
 import RelatedGames from "./RelatedGames.js";
+import Reviews from "./Reviews.js";
 
 function PrimaryInfoLeft() {
     const primaryInfoLeftStyle = {
@@ -19,6 +20,7 @@ function PrimaryInfoLeft() {
         <div className="PrimaryInfoLeft" style={primaryInfoLeftStyle}>
             <PrimaryInfo/>
             <RelatedGames/>
+            <Reviews />
         </div>
     );
 }

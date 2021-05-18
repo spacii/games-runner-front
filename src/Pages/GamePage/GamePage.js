@@ -18,8 +18,8 @@ function GamePage({match}) {
   );
   
   useEffect(() => {
-    //fetch(`http://localhost:8080/api/games/${match.params.id}`)
-    fetch(`https://games-runner-db.herokuapp.com/api/games/${match.params.id}`)
+    fetch(`http://localhost:8080/api/games/${match.params.id}`)
+    //fetch(`https://games-runner-db.herokuapp.com/api/games/${match.params.id}`)
       .then(response => {
           if(!response.ok) {
             throw new Error(response);
