@@ -15,7 +15,7 @@ function GamesPage(){
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        fetch("https://games-runner-db.herokuapp.com/api/games")
+        fetch("http://localhost:8080/api/games")
             .then(gamesResponce => gamesResponce.json())
             .then(gamesResult => setGames(gamesResult._embedded.games))
             .catch(error => console.log(error))

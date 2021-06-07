@@ -7,6 +7,7 @@ import Games from "./Pages/GamesPage/GamesPage.js";
 import Person from "./Pages/PersonPage/PersonPage.js";
 import PageNotReady from "./Pages/ErrorPages/PageNotReady.js";
 import Error404Page from "./Pages/ErrorPages/Error404Page.js";
+import PassportPage from "./Pages/PassportPage/PassportPage.js";
 import reportWebVitals from './reportWebVitals';
 import "./index.css"
 
@@ -29,6 +30,8 @@ ReactDOM.render(
           <Route path="/persons" exact component={PageNotReady} />
           <Route path="/person/:id" component={PageNotReady} />
           
+          <Route path="/passport" component={PassportPage} />
+
           <Route path="*" component={Error404Page} />
       </Switch>
 		</Router>

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import Modal from "react-modal";
 
 import InfoWrapper from "./InfoWrapper/InfoWrapper.js";
 import PrimaryInfoWrapper from "./PrimaryInfoWrapper/PrimaryInfoWrapper.js";
@@ -16,6 +17,14 @@ function GamePage({match}) {
         error: null
       }
   );
+
+  const [mainMenuIsOpen, setMainMenuIsOpen] = useState(false)
+  const mainMenuStyle = {
+    content : {
+      
+    },
+    overlay: {zIndex: 1000}
+  }
   
   useEffect(() => {
     fetch(`http://localhost:8080/api/games/${match.params.id}`)
@@ -49,11 +58,27 @@ function GamePage({match}) {
   else if(result.game) {
     return (
       <div style={{position: "absolute"}}>
+        <div style={{position: "absolute", margin: "16px"}} onClick={() => setMainMenuIsOpen(true)}>
+          <div style={{width: "35px", height: "5px", backgroundColor: "white", margin: "6px 0"}}></div>
+          <div style={{width: "35px", height: "5px", backgroundColor: "white", margin: "6px 0"}}></div>
+          <div style={{width: "35px", height: "5px", backgroundColor: "white", margin: "6px 0"}}></div>
+        </div>
         <MediaContext.Provider value={{game: result.game, match}}>
           <InfoWrapper/>
           <PrimaryInfoWrapper/>
           <BottomWrapper/>
         </MediaContext.Provider>
+        <Modal isOpen={mainMenuIsOpen} style={mainMenuStyle}>
+          <div style={{position: "relative", margin: "16px"}} onClick={() => setMainMenuIsOpen(false)}>
+            <div style={{width: "35px", height: "5px", backgroundColor: "black", margin: "6px 0"}}></div>
+            <div style={{width: "35px", height: "5px", backgroundColor: "black", margin: "6px 0"}}></div>
+            <div style={{width: "35px", height: "5px", backgroundColor: "black", margin: "6px 0"}}></div>
+          </div>
+
+          <a href="http://localhost:3000/passport">
+            <button>Авторизация/Регистрация</button>
+          </a>
+        </Modal>
       </div>
     );
   } 

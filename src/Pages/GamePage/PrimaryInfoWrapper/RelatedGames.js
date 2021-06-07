@@ -44,7 +44,7 @@ function RelatedGames() {
 
     return (
         seqAndPreq.length !== 0 && (
-            <div className="RelatedGames">
+            <div className="RelatedGames" style={{marginBottom: "32px"}}>
                 <h2 style={{fontWeight: "600", marginBottom: "24px"}}>
                     <a href={"/game/"+match.params.id+"/relations"} style={{textDecoration: "none", color: "#1f1f1f"}}>Related games</a>
                 </h2>

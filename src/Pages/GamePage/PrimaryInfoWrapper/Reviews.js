@@ -15,7 +15,7 @@ function Reviews() {
 
     return (
         <div>
-            <h1>Reviews</h1>
+            <h1 style={{marginBottom: "12px", color: "#393939", fontFamily: "Georgia, serif"}}>Reviews</h1>
             <div className="ReviewsList">
                 {
                     reviewArr && (

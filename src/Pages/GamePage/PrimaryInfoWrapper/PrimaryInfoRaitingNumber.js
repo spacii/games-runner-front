@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
+
+import MediaContext from "../MediaContext.js";
 
 function PrimaryInfoRaitingNumber() {
     const primaryInfoRaitingNumber = {
@@ -11,14 +13,16 @@ function PrimaryInfoRaitingNumber() {
         fontWeight: "bold"
     }
 
+    const {game} = useContext(MediaContext)
+
     return (
         <div className="PrimaryInfoRaitingNumber" style={primaryInfoRaitingNumber}>
             <span>
-                <a style={aStyle}>7.223</a>
+                <a style={aStyle}>{game.rating}</a>
             </span>
             <span> </span>
             <span>
-                457 746
+                {game.ratingCounts}
             </span>
         </div>
     );

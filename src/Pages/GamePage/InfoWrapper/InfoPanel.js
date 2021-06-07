@@ -43,7 +43,7 @@ function InfoPanel(){
             </div>
             <div className="GameInfo">
                 <div className="GameInfoRaiting">
-                    7.2
+                    {game.rating}
                 </div>
                 <div className="GameInfoGeneral">
                     <span className="GameInfoGeneralSpan">
